@@ -1,0 +1,43 @@
+{% extends "template.html" %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+    {{ super() }}
+    <div class="container my-5">
+        <div class="row">
+          <div class="col-md-4 my-auto text-center">
+            <img src="/staticFiles/passportPhoto4.jpg" class="img-fluid rounded-circle" alt="Developer 1 Profile Picture">
+          </div>
+          <div class="col-md-8 d-flex align-items-center">
+            <div>
+              <h3 class="font-italic mb-3">Casper Ng</h3>
+              <h4 class="font-italic mb-4 blue">Software Engineer</h4>
+              <p class="text-muted"> Computer Science student at NUS, graduating in 2027. Did not go to MIT. </p>
+              <p class="text-muted"> You can contact him at <a href="mailto:casperngeen@gmail.com">casperngeen@gmail.com</a> </p>   
+            </div>
+          </div>
+        </div>
+      
+        <hr class="my-4">
+      
+        <div class="row">
+          <div class="col-md-4 my-auto text-center">
+            <img src="/staticFiles/junhan.jpeg" class="img-fluid rounded-circle" alt="Developer 2 Profile Picture" style="object-fit: none; object-position: 70% 50%; height: 400px; width: 400px;">
+          </div>
+          
+          
+          
+          
+          <div class="col-md-8 d-flex align-items-center">
+            <div>
+              <h3 class="font-italic mb-3">Ho Jun Han</h3>
+              <h4 class="font-italic mb-4 blue">Software Engineer</h4>
+              <p class="text-muted">Computing student in University College London, graduating in 2026. Did not go to Harvard.</p> 
+              <p class="text-muted"> You can contact him at <a href="mailto:hojunhan49@gmail.com">hojunhan49@gmail.com</a> </p>  
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}
+

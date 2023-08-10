@@ -1,0 +1,32 @@
+{% extends "template.html" %}
+
+{% block title %}Recommendations{% endblock %}
+
+{% block content %}
+    {{ super() }}
+          <div class="container my-5">
+            <h1 class="text-center">Movies recommended for you</h1>
+          </div>
+          {% for movie in movies %}
+          <div class="row justify-content-center mt-4">
+            <div class="col-md-6">
+              <div class="card">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img class="card-img" src="{{ movie.image }}" alt="{{ movie.name }}">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ movie.title }}</h5>
+                      <p class="card-text">{{ movie.description }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+{% endblock %}      
+      
+      
+ 

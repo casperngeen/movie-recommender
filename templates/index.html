@@ -1,0 +1,27 @@
+{% extends "template.html" %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+    {{ super() }}
+    <div class="container my-5">
+        <div class="row justify-content-center align-items-center" style="height: calc(100vh - 250px);">
+          <div class="col-md-6">
+            <form>
+              <div class="form-group text-center" style="margin-top: -30px;">
+                <label for="movie" class="h4 mb-4">Enter your favorite movie:</label>
+                <div class="input-group mb-4">
+                    <input type="search" class="form-control form-control-lg" id="movie" name="movie" placeholder="e.g. The Godfather" required>
+                    <select id="movieSelection" size="5"></select>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <script src="/staticFiles/dropdown.js"></script>
+{% endblock %}
+
+          

@@ -1,0 +1,57 @@
+{% extends "template.html" %}
+
+{% block title %}Need Help?{% endblock %}
+
+{% block content %}
+    {{ super() }}
+          <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Need help?</h2>
+                    <div class="card">
+                        <div class="card-header">
+                            <button class="btn blue size15" type="button" data-bs-toggle="collapse" data-bs-target="#how-this-works"
+                                    aria-expanded="false" aria-controls="how-this-works">
+                                How this works
+                            </button>
+                        </div>
+                        <div class="collapse" id="how-this-works">
+                            <div class="card-body">
+                                <p class="card-text"> Tech stack: HTML, CSS, JavaScript, Python <br>
+                                    <br>
+                                    We used HTML and CSS to create the web interfaces, and for functions like the search bar, we used
+                                    JavaScript to provide options for the user to select. We chose to use Flask to bind the web app together.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <button class="btn blue size15" type="button" data-bs-toggle="collapse" data-bs-target="#more-about-algorithm"
+                                    aria-expanded="false" aria-controls="more-about-algorithm">
+                                More about our algorithm
+                            </button>
+                        </div>
+                        <div class="collapse" id="more-about-algorithm">
+                            <div class="card-body">
+                                <p class="card-text"> We chose to use a content-based filtering system, over a collaborative filtering system,
+                                    as it was easier for us to implement and users did not have to log in to use the website. Our algorithm thus
+                                    filtered out details like directors, actors, ratings of the film of choice, and searched across the IMDB database
+                                    to find similar movies based on these attributes. 
+                                </p>
+                            </div>
+                        </div>                  
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-6">
+                    <a href="/aboutus" class="btn btn-lg blue-header white-text">Contact Us</a>
+                </div>
+            </div>
+        </div>
+          
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+                    
+        {% endblock %}
