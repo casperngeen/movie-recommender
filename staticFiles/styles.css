@@ -1,0 +1,78 @@
+.blue-background, .blue-background:hover {
+    background-color:cornflowerblue;
+}
+
+.white-text {
+    color:aliceblue;
+}
+
+.white-text:hover {
+    font-size: larger;
+    color:aliceblue;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.blue {
+    color: rgba(0, 58, 122, 0.7);
+}
+
+.blue:hover {
+    color: rgba(0, 58, 122, 0.7);
+    font-size: 22px;
+}
+
+.size18 {
+    font-size: 18px;
+    font-weight: 5004;
+}
+
+.blue-header , .blue-header:hover{
+    background-color: rgba(0, 58, 122, 0.7);
+}
+
+.card-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .search-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .form-control {
+    width: 300px; 
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #movieSelection {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 200px; 
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    background-color: #fff;
+  }
+  
+  #movieSelection option {
+    padding: 5px;
+    font-size: 14px;
+    background-color: #fff;
+  }
+  
+  #movieSelection option:hover {
+    background-color: #f1f1f1;
+  }
+  

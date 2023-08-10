@@ -1,0 +1,74 @@
+Movie Recommendation Web App
+
+User input favourite movie -> Find movies related based on category tags 
+
+Step 1: User input a movie
+
+Step 2: Check if the movie is part of the IMDB database
+
+Step 3: Filter movies based on some metric (RottenTomatoes/MetaCritic Score)
+
+(Additional feature: Add filters to the kind of movie they want to watch eg duration, rating, language, how many recommendations they want to see)
+
+Step 4: Create a weighted matching system to see how similar 2 movies are
+		- Category tags
+		- No. of views / box office
+		- Ratings
+		- Add: Multiplier/bonus points if user feedback that the recommendation is good
+
+Step 5: Ask for user feedback on the recommendations
+
+UI Design:
+Website HTML/CSS (Bootstrap)
+-Navigation Bar: Recommender/How to use/How it works/(Contact)/Log out
+-Login page/Sign In page
+-Try out the design
+
+TODO:
+Come up with pseudocode framework for the matching algorithm
+
+
+use mySQL as our database
+
+String userMovie;
+similarity {}; (empty object)
+
+for movie in database:
+	float categoryScore = 0;
+	for category in database:
+		if hasCategory(category, userMovie) && hasCategory(category, movie) {
+			categoryScore++;
+		}
+	float plotScore = plotSummaryMatcher(movie, userMovie);
+	float actorScore = 0
+	for actor in userMovie: (generate a list of actors based on userMovie)
+		if hasActor(movie, actor) {
+			actorScore++; (maybe we can grow it exponentially since the more similar actors means a high chance of similarity in movie?)
+		}
+	directorScore = hasSameDirector(movie, userMovie);
+	viewScore = log(viewCount(movie)); //see in which number region the movie views is in (thousands, millions, billons etc)
+	finalScore = actorScore + directorScore + viewScore + categoryScore + plotScore 
+	similarity[movie] = score;
+
+sort(similarity);
+
+for (i = 0; i < 3; i++) {
+	print(Object.key(similarity)[i], Object.value(similairity)[i];
+}
+//print a table of options 1 row movie title, 1 row the score (this maybe under html already)
+
+hasCatgory(category, movie) {
+	use IMDB API - keywords?
+}
+	
+plotSummaryMatcher(movie1, movie2) { //this one a bit hard ngl
+	
+} 
+
+hasActor(movie, actor){
+	use IMDB API - there is a JSON of the cast of all movie (compare the names of the actors)
+
+}
+
+hasSameDirector(movie1, movie2) {
+	user IMDB API - there is a JSON of the cast of all movie (includes director and writer)
